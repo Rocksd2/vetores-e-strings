@@ -36,6 +36,12 @@ Vetores e Strings/
 │   └── Aula06.c          #  fgets + strcspn + strlen
 ├── Atividade/
 │   └── Atv01.c           #  soma e média de dois vetores
+├── scripts/
+│   ├── sync.ps1          #  commit + push em um comando
+│   └── auto-sync.ps1     #  watcher: sincroniza sozinho ao salvar
+├── .opencode/
+│   ├── agents/           #  agente git-sync (OpenCode)
+│   └── commands/         #  comando /sync
 ├── bin/                  #  executáveis (.exe) — fora do versionamento
 ├── .vscode/              #  build & debug prontos (F5 / Ctrl+Shift+B)
 ├── .gitignore
@@ -86,6 +92,59 @@ bin\Aula01.exe
 |:--|:--|:--|
 | Compilar arquivo ativo | `Ctrl + Shift + B` | gera `bin/<arquivo>.exe` |
 | Compilar e depurar | `F5` | abre o terminal com `gdb` |
+
+---
+
+## 🤖 `git push --auto`
+
+Este repositório tem um **sincronizador automático**: toda vez que um arquivo é
+salvo, criado ou apagado, ele faz `add` → `commit` → `push` sozinho.
+
+```bash
+# ligar o vigia (fica rodando no terminal)
+.\scripts\auto-sync.ps1
+
+# sincronizar uma vez, na mão
+.\scripts\sync.ps1
+
+# commit com mensagem própria, sem push
+.\scripts\sync.ps1 -Mensagem "add: exercicio de strings" -SemPush
+```
+
+**Como funciona**
+
+```text
+salvou o arquivo
+      │
+      ▼
+FileSystemWatcher  ──►  aguarda 10s de silêncio
+      │
+      ▼
+git add -A  ──►  git commit  ──►  git push origin main
+                                   (rebase automático se o remoto estiver na frente)
+```
+
+| Camada | Arquivo | Quando roda |
+|:--|:--|:--|
+| Automação total | [`scripts/auto-sync.ps1`](scripts/auto-sync.ps1) | ao salvar qualquer arquivo (task `Git: auto-sync`, roda ao abrir a pasta) |
+| Um comando | [`scripts/sync.ps1`](scripts/sync.ps1) | `Ctrl+Shift+P` → *Run Task* → `Git: sync agora` |
+| Dentro do agente | [`.opencode/agents/git-sync.md`](.opencode/agents/git-sync.md) | pedindo ao agente, ou com o comando `/sync` |
+
+<details>
+<summary><b>Ignorados pelo vigia</b></summary>
+
+`.git/`, `bin/`, `*.exe`, `*.o`, `*.obj`, `*.log` — nada disso gera commit.
+O log da automação fica em `.git/auto-sync.log` (fora do versionamento).
+
+</details>
+
+<details>
+<summary><b>Desligar a automação</b></summary>
+
+No VS Code: `Ctrl+Shift+P` → **Tasks: Manage Automatic Tasks** → *Disallow Automatic Tasks*.
+Ou simplesmente feche o terminal do watcher com `Ctrl+C`.
+
+</details>
 
 ---
 
