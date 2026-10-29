@@ -1,0 +1,9 @@
+# Executaveis compilados
+bin/
+*.exe
+*.o
+*.obj
+
+# Arquivos gerados pelo depurador
+*.pdb
+*.ilk
