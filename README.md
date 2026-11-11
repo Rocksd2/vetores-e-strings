@@ -35,7 +35,8 @@ Vetores e Strings/
 │   ├── Aula05.c          #  strlen / strcpy / strcmp
 │   └── Aula06.c          #  fgets + strcspn + strlen
 ├── Atividade/
-│   └── Atv01.c           #  soma e média de dois vetores
+│   ├── Atv01.c           #  soma e média de dois vetores
+│   └── Atv02.c           #  maior e menor de 5 números
 ├── scripts/
 │   ├── sync.ps1          #  commit + push em um comando
 │   └── auto-sync.ps1     #  watcher: sincroniza sozinho ao salvar
@@ -61,6 +62,7 @@ Vetores e Strings/
 | `05` | [`Aula05.c`](Aulas/Aula05.c) | Strings | Copia, compara e mede `"banana"` |
 | `06` | [`Aula06.c`](Aulas/Aula06.c) | Strings | `fgets` + remove o `\n` com `strcspn` |
 | `⭐` | [`Atv01.c`](Atividade/Atv01.c) | Atividade | Soma posição a posição + média de cada vetor |
+| `⭐` | [`Atv02.c`](Atividade/Atv02.c) | Atividade | Lê 5 números e mostra o maior e o menor |
 
 ---
 
