@@ -29,23 +29,23 @@ Anotações e exercícios de **Linguagem C** — arrays, strings e a base de tud
 ```bash
 Vetores e Strings/
 ├── Aulas/                #  6 aulas, um programa independente cada
-│   ├── Aula01.c          #  Cria int v[5], imprime os Ã­ndices e sobrescreve v[2]
-│   ├── Aula02.c          #  LÃª 5 idades e devolve na ordem inversa
+│   ├── Aula01.c          #  Cria int v[5], imprime índices e sobrescreve v[2]
+│   ├── Aula02.c          #  Lê 5 idades e devolve na ordem inversa
 │   ├── Aula03.c          #  v2[i] = v1[i] * 2 e mostra lado a lado
-│   ├── Aula04.c          #  soma_vetor() percorre n posiÃ§Ãµes
+│   ├── Aula04.c          #  soma_vetor() percorre n posições
 │   ├── Aula05.c          #  Copia, compara e mede "banana"
 │   └── Aula06.c          #  fgets + remove o \n com strcspn
 ├── Atividade/            #  exercicios entregues em sala
-│   ├── Atv01.c           #  Soma posiÃ§Ã£o a posiÃ§Ã£o + mÃ©dia de cada vetor
-│   └── Atv02.c           #  LÃª 5 nÃºmeros e mostra o maior e o menor
-├── scripts/              #  commit + push em um comando
+│   ├── Atv01.c           #  Soma posição a posição + média de cada vetor
+│   └── Atv02.c           #  Lê 5 números e mostra o maior e o menor
+├── scripts/              #  automação do repositório
 │   ├── sync.ps1          #  commit + push em um comando
 │   ├── auto-sync.ps1     #  watcher: sincroniza sozinho ao salvar
-│   └── update-readme.ps1 #  regenera esta arvore e o indice
+│   └── update-readme.ps1 #  regenera esta árvore e o índice
 ├── .opencode/            #  agente git-sync (OpenCode)
 │   ├── agents/           #  agente git-sync
 │   └── commands/         #  comando /sync
-├── bin/                  #  executaveis (.exe) - fora do versionamento
+├── bin/                  #  executáveis (.exe) — fora do versionamento
 ├── .vscode/              #  build & debug prontos (F5 / Ctrl+Shift+B)
 ├── .gitignore
 └── README.md
@@ -59,14 +59,14 @@ Vetores e Strings/
 <!-- indice:inicio -->
 | # | Arquivo | Tema | O que acontece |
 |:-:|:--|:--|:--|
-| `01` | [`Aula01.c`](Aulas/Aula01.c) | Vetores | Cria int v[5], imprime os Ã­ndices e sobrescreve v[2] |
-| `02` | [`Aula02.c`](Aulas/Aula02.c) | LaÃ§o + vetor | LÃª 5 idades e devolve na ordem inversa |
-| `03` | [`Aula03.c`](Aulas/Aula03.c) | Dois vetores | v2[i] = v1[i] * 2 e mostra lado a lado |
-| `04` | [`Aula04.c`](Aulas/Aula04.c) | Vetor + funÃ§Ã£o | soma_vetor() percorre n posiÃ§Ãµes |
-| `05` | [`Aula05.c`](Aulas/Aula05.c) | Strings | Copia, compara e mede "banana" |
+| `01` | [`Aula01.c`](Aulas/Aula01.c) | Vetores | Cria `int v[5]`, imprime índices e sobrescreve `v[2]` |
+| `02` | [`Aula02.c`](Aulas/Aula02.c) | Laço + vetor | Lê 5 idades e devolve na ordem inversa |
+| `03` | [`Aula03.c`](Aulas/Aula03.c) | Dois vetores | `v2[i] = v1[i] * 2` e mostra lado a lado |
+| `04` | [`Aula04.c`](Aulas/Aula04.c) | Vetor + função | `soma_vetor()` percorre `n` posições |
+| `05` | [`Aula05.c`](Aulas/Aula05.c) | Strings | Copia, compara e mede `"banana"` |
 | `06` | [`Aula06.c`](Aulas/Aula06.c) | Strings | fgets + remove o \n com strcspn |
-| `⭐` | [`Atv01.c`](Atividade/Atv01.c) | Atividade | Soma posiÃ§Ã£o a posiÃ§Ã£o + mÃ©dia de cada vetor |
-| `⭐` | [`Atv02.c`](Atividade/Atv02.c) | Atividade | LÃª 5 nÃºmeros e mostra o maior e o menor |
+| `⭐` | [`Atv01.c`](Atividade/Atv01.c) | Atividade | Soma posição a posição + média de cada vetor |
+| `⭐` | [`Atv02.c`](Atividade/Atv02.c) | Atividade | Lê 5 números e mostra o maior e o menor |
 <!-- indice:fim -->
 
 ---

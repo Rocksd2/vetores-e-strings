@@ -1,4 +1,4 @@
-// tema: Dois vetores | desc: v2[i] = v1[i] * 2 e mostra lado a lado
+// tema: Dois vetores | desc: `v2[i] = v1[i] * 2` e mostra lado a lado
 #include <stdio.h>
 
 int main(){

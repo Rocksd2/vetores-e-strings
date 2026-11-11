@@ -25,7 +25,7 @@ function Get-Exercicios {
     Get-ChildItem -Path (Join-Path $repo $Pasta) -Filter '*.c' -File |
         Sort-Object Name |
         ForEach-Object {
-            $primeira = Get-Content -Path $_.FullName -TotalCount 1
+            $primeira = ([System.IO.File]::ReadAllText($_.FullName, [System.Text.Encoding]::UTF8) -split "`r?`n")[0]
             if ($primeira -match '^\s*//\s*tema:\s*(.+?)\s*\|\s*desc:\s*(.+?)\s*$') {
                 $tema = $Matches[1]
                 $desc = $Matches[2]
@@ -42,7 +42,7 @@ function Get-Exercicios {
 function Linha-Arvore {
     param([string]$Prefixo, [string]$Desc)
     $texto = if ($Prefixo.Length -lt 26) { $Prefixo.PadRight(26) } else { $Prefixo + ' ' }
-    return $texto + '#  ' + $Desc
+    return $texto + '#  ' + ($Desc -replace '`', '')
 }
 
 function Bloco-Pasta {
@@ -63,14 +63,14 @@ $arvore = @('Vetores e Strings/')
 $arvore += (Bloco-Pasta 'Aulas' "$($aulas.Count) aulas, um programa independente cada" $aulas)
 $arvore += (Bloco-Pasta 'Atividade' 'exercicios entregues em sala' $atividades)
 $arvore += @(
-    (Linha-Arvore '├── scripts/' 'commit + push em um comando'),
+    (Linha-Arvore '├── scripts/' 'automação do repositório'),
     (Linha-Arvore '│   ├── sync.ps1' 'commit + push em um comando'),
     (Linha-Arvore '│   ├── auto-sync.ps1' 'watcher: sincroniza sozinho ao salvar'),
-    (Linha-Arvore '│   └── update-readme.ps1' 'regenera esta arvore e o indice'),
+    (Linha-Arvore '│   └── update-readme.ps1' 'regenera esta árvore e o índice'),
     (Linha-Arvore '├── .opencode/' 'agente git-sync (OpenCode)'),
     (Linha-Arvore '│   ├── agents/' 'agente git-sync'),
     (Linha-Arvore '│   └── commands/' 'comando /sync'),
-    (Linha-Arvore '├── bin/' 'executaveis (.exe) - fora do versionamento'),
+    (Linha-Arvore '├── bin/' 'executáveis (.exe) — fora do versionamento'),
     (Linha-Arvore '├── .vscode/' 'build & debug prontos (F5 / Ctrl+Shift+B)'),
     '├── .gitignore',
     '└── README.md'
