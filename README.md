@@ -138,6 +138,22 @@ git add -A  ──►  git commit  ──►  git push origin main
 | Dentro do agente | [`.opencode/agents/git-sync.md`](.opencode/agents/git-sync.md) | pedindo ao agente, ou com o comando `/sync` |
 
 <details>
+<summary><b>README automático</b></summary>
+
+A árvore e a tabela de exercícios são geradas por [`scripts/update-readme.ps1`](scripts/update-readme.ps1),
+que roda sozinho antes de cada commit do `sync.ps1`.
+
+Para um exercício novo aparecer com descrição, a primeira linha do `.c` deve ser:
+
+```c
+// tema: Vetores | desc: Cria `int v[5]` e sobrescreve `v[2]`
+```
+
+Sem essa linha o arquivo entra como `sem descricao` — nunca fica de fora.
+
+</details>
+
+<details>
 <summary><b>Ignorados pelo vigia</b></summary>
 
 `.git/`, `bin/`, `*.exe`, `*.o`, `*.obj`, `*.log` — nada disso gera commit.
