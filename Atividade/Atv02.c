@@ -12,7 +12,7 @@ int main(){
         if(v[i] > maior){
             maior = v[i];
         }
-        if(v[i] < menor){   
+        if(v[i] < menor){
             menor = v[i];
         }
     }
