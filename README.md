@@ -25,6 +25,7 @@ Anotações e exercícios de **Linguagem C** — arrays, strings e a base de tud
 
 ## 📂 `tree -L 2`
 
+<!-- arvore:inicio -->
 ```bash
 Vetores e Strings/
 ├── Aulas/                # 6 aulas, um programa independente cada
@@ -48,11 +49,13 @@ Vetores e Strings/
 ├── .gitignore
 └── README.md
 ```
+<!-- arvore:fim -->
 
 ---
 
 ## 📚 `cat index.md`
 
+<!-- indice:inicio -->
 | # | Arquivo | Tema | O que acontece |
 |:-:|:--|:--|:--|
 | `01` | [`Aula01.c`](Aulas/Aula01.c) | Vetores | Cria `int v[5]`, imprime índices e sobrescreve `v[2]` |
@@ -63,6 +66,7 @@ Vetores e Strings/
 | `06` | [`Aula06.c`](Aulas/Aula06.c) | Strings | `fgets` + remove o `\n` com `strcspn` |
 | `⭐` | [`Atv01.c`](Atividade/Atv01.c) | Atividade | Soma posição a posição + média de cada vetor |
 | `⭐` | [`Atv02.c`](Atividade/Atv02.c) | Atividade | Lê 5 números e mostra o maior e o menor |
+<!-- indice:fim -->
 
 ---
 
