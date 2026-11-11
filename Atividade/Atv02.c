@@ -13,7 +13,7 @@ int main(){
             maior = v[i];
         }
         if(v[i] < menor){
-            menor = v[i];
+            menor = v[i];3
         }
     }
     printf("Maior: %d\n", maior);
