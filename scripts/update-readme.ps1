@@ -1,4 +1,4 @@
-# update-readme.ps1 - regenera a arvore e o indice do README a partir dos .c.
+﻿# update-readme.ps1 - regenera a arvore e o indice do README a partir dos .c.
 #
 # Cada exercicio se descreve na primeira linha do proprio arquivo:
 #   // tema: Vetores | desc: Cria int v[5] e sobrescreve v[2]
@@ -51,7 +51,7 @@ function Bloco-Pasta {
     $linhas = @(Linha-Arvore "├── $Pasta/" $Comentario)
     for ($i = 0; $i -lt $Itens.Count; $i++) {
         $ramo = if ($i -eq $Itens.Count - 1) { '└──' } else { '├──' }
-        $linhas += Linha-Arvore "│   $ramo $($Itens[$i].Nome)" $Itens[$i].Desc
+        $linhas += (Linha-Arvore "│   $ramo $($Itens[$i].Nome)" $Itens[$i].Desc)
     }
     return $linhas
 }
@@ -60,8 +60,8 @@ $aulas = @(Get-Exercicios 'Aulas')
 $atividades = @(Get-Exercicios 'Atividade')
 
 $arvore = @('Vetores e Strings/')
-$arvore += Bloco-Pasta 'Aulas' "$($aulas.Count) aulas, um programa independente cada" $aulas
-$arvore += Bloco-Pasta 'Atividade' 'exercicios entregues em sala' $atividades
+$arvore += (Bloco-Pasta 'Aulas' "$($aulas.Count) aulas, um programa independente cada" $aulas)
+$arvore += (Bloco-Pasta 'Atividade' 'exercicios entregues em sala' $atividades)
 $arvore += @(
     (Linha-Arvore '├── scripts/' 'commit + push em um comando'),
     (Linha-Arvore '│   ├── sync.ps1' 'commit + push em um comando'),

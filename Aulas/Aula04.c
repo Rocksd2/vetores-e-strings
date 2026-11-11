@@ -1,3 +1,4 @@
+// tema: Vetor + função | desc: soma_vetor() percorre n posições
 #include <stdio.h>
 
 int soma_vetor(int v[], int n){

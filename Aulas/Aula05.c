@@ -1,3 +1,4 @@
+// tema: Strings | desc: Copia, compara e mede "banana"
 #include <stdio.h>
 #include <string.h>
 

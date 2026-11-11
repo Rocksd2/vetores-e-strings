@@ -1,3 +1,4 @@
+// tema: Strings | desc: fgets + remove o \n com strcspn
 #include <stdio.h>
 #include <string.h>
 

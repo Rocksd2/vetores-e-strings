@@ -61,6 +61,14 @@ function Invoke-Sync {
             return 0
         }
 
+        # arvore e indice do README acompanham os .c sem ninguem precisar editar a mao
+        try {
+            & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $PSScriptRoot 'update-readme.ps1') -Silencioso | Out-Null
+        }
+        catch {
+            Escrever "  ! update-readme falhou: $($_.Exception.Message)" 'Yellow'
+        }
+
         $null = Invoke-Git -Argumentos 'add', '-A'
 
         $staged = Invoke-Git -Argumentos 'diff', '--cached', '--name-only'

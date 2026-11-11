@@ -1,3 +1,4 @@
+// tema: Atividade | desc: Soma posição a posição + média de cada vetor
 #include <stdio.h>
 
 int main() {

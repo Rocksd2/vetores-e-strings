@@ -1,3 +1,4 @@
+// tema: Atividade | desc: Lê 5 números e mostra o maior e o menor
 #include <stdio.h>
 
 int main(){

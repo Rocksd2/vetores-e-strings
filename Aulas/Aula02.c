@@ -1,3 +1,4 @@
+// tema: Laço + vetor | desc: Lê 5 idades e devolve na ordem inversa
 #include <stdio.h>
 
 int main(){
