@@ -35,7 +35,7 @@ Vetores e Strings/
 │   ├── Aula04.c          #  soma_vetor() percorre n posições
 │   ├── Aula05.c          #  Copia, compara e mede "banana"
 │   └── Aula06.c          #  fgets + remove o \n com strcspn
-├── Atividade/            #  exercicios entregues em sala
+├── Atividade/            #  exercícios entregues em sala
 │   ├── Atv01.c           #  Soma posição a posição + média de cada vetor
 │   └── Atv02.c           #  Lê 5 números e mostra o maior e o menor
 ├── scripts/              #  automação do repositório
@@ -64,7 +64,7 @@ Vetores e Strings/
 | `03` | [`Aula03.c`](Aulas/Aula03.c) | Dois vetores | `v2[i] = v1[i] * 2` e mostra lado a lado |
 | `04` | [`Aula04.c`](Aulas/Aula04.c) | Vetor + função | `soma_vetor()` percorre `n` posições |
 | `05` | [`Aula05.c`](Aulas/Aula05.c) | Strings | Copia, compara e mede `"banana"` |
-| `06` | [`Aula06.c`](Aulas/Aula06.c) | Strings | fgets + remove o \n com strcspn |
+| `06` | [`Aula06.c`](Aulas/Aula06.c) | Strings | `fgets` + remove o `\n` com `strcspn` |
 | `⭐` | [`Atv01.c`](Atividade/Atv01.c) | Atividade | Soma posição a posição + média de cada vetor |
 | `⭐` | [`Atv02.c`](Atividade/Atv02.c) | Atividade | Lê 5 números e mostra o maior e o menor |
 <!-- indice:fim -->

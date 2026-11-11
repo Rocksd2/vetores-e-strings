@@ -61,7 +61,7 @@ $atividades = @(Get-Exercicios 'Atividade')
 
 $arvore = @('Vetores e Strings/')
 $arvore += (Bloco-Pasta 'Aulas' "$($aulas.Count) aulas, um programa independente cada" $aulas)
-$arvore += (Bloco-Pasta 'Atividade' 'exercicios entregues em sala' $atividades)
+$arvore += (Bloco-Pasta 'Atividade' 'exercícios entregues em sala' $atividades)
 $arvore += @(
     (Linha-Arvore '├── scripts/' 'automação do repositório'),
     (Linha-Arvore '│   ├── sync.ps1' 'commit + push em um comando'),
